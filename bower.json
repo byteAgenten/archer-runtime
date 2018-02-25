@@ -1,0 +1,27 @@
+{
+  "name": "archer-runtime",
+  "version": "1.2.0",
+  "authors": [
+    "Sascha <sascha.issbruecker@byteagenten.de>"
+  ],
+  "description": "Archer graphics runtime",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "tbd",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "snap.svg": "~0.3.0"
+  },
+  "devDependencies": {
+    "jquery": "~2.2.1",
+    "requirejs": "~2.1.22"
+  }
+}

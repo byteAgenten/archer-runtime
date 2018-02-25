@@ -1,0 +1,31 @@
+{
+  "variables": [
+    {
+      "name": "value",
+      "type": "number",
+      "keyFrames": {},
+      "minimum": 0,
+      "maximum": 100,
+      "defaultValue": 0
+    }
+  ],
+  "transformations": [
+    {
+      "type": "fill-color",
+      "element": "rect",
+      "variable": "value",
+      "frames": {
+        "min": {
+          "value": "#aaaaff",
+          "transition": "linear"
+        },
+        "max": {
+          "value": "#ffaaaa",
+          "transition": "linear"
+        }
+      },
+      "priority": 0
+    }
+  ],
+  "notifications": []
+}

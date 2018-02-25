@@ -1,0 +1,16 @@
+# Dependencies:
+
+- NodeJS (http://nodejs.org/download/)
+
+# Setup:
+
+npm install grunt-cli -g
+npm install bower -g
+npm install lodash-cli -g
+npm install webpack -g
+npm install
+bower install
+
+# Create build:
+
+grunt

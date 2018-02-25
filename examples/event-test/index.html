@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+
+        body {
+            overflow: auto;
+        }
+
+        #container {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="container"></div>
+
+<script src='../../bower_components/jquery/dist/jquery.js'></script>
+<script src='../../bower_components/snap.svg/dist/snap.svg.js'></script>
+<script src='../../bower_components/requirejs/require.js'></script>
+<script type="application/javascript">
+
+    require.config({
+        paths: {
+            'iag/client': '../../../src/iag/client',
+            'lodash': '../../../dist/lodash/lodash.build'
+        }
+    });
+
+    require(['iag/client/client'], function (archer) {
+
+        var graphic = archer.create(document.getElementById('container'));
+
+        graphic.load('bbox.svg', 'cbonfig.json');
+
+        graphic.on('ready', function () {
+
+            graphic.element('rect').on('click', logDomEvent);
+            graphic.element('rect').on('mouseover', logDomEvent);
+            graphic.element('rect').on('mouseout', logDomEvent);
+
+            graphic.on('element.click', logBubbledDomEvent);
+            graphic.on('element.mouseover', logBubbledDomEvent);
+            graphic.on('element.mouseout', logBubbledDomEvent);
+
+            function logDomEvent(element, event) {
+                console.log('DOM Event: element=' + element.id + ', type=' + event.type + ', container=(' + event.bbox.x + ',' + event.bbox.y + '), page=(' + event.bbox.pageX + ',' + event.bbox.pageY + '), screen=(' + event.bbox.clientX + ',' + event.bbox.clientY + ')');
+            }
+
+            function logBubbledDomEvent(element, event) {
+                console.log('Bubbled DOM Event: element=' + element.id + ', type=' + event.type + ', container=(' + event.bbox.x + ',' + event.bbox.y + '), page=(' + event.bbox.pageX + ',' + event.bbox.pageY + '), screen=(' + event.bbox.clientX + ',' + event.bbox.clientY + ')');
+            }
+        });
+    });
+
+</script>
+
+</body>
+</html>

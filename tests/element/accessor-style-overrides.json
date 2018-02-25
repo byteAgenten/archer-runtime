@@ -1,0 +1,133 @@
+{
+  "variables": [
+    {
+      "name": "test",
+      "type": "text",
+      "keyFrames": {
+        "test": "test"
+      }
+    }
+  ],
+  "transformations": [
+    {
+      "type": "fill-color",
+      "variable": "test",
+      "element": "rect-attribute-styles",
+      "frames": {
+        "test": {
+          "value": "#ff0000"
+        }
+      }
+    },
+    {
+      "type": "stroke-color",
+      "variable": "test",
+      "element": "rect-attribute-styles",
+      "frames": {
+        "test": {
+          "value": "#ff0000"
+        }
+      }
+    },
+    {
+      "type": "stroke-width",
+      "variable": "test",
+      "element": "rect-attribute-styles",
+      "frames": {
+        "test": {
+          "value": 10
+        }
+      }
+    },
+    {
+      "type": "opacity",
+      "variable": "test",
+      "element": "rect-attribute-styles",
+      "frames": {
+        "test": {
+          "value": 0.5
+        }
+      }
+    },
+    {
+      "type": "fill-color",
+      "variable": "test",
+      "element": "rect-inline-css-styles",
+      "frames": {
+        "test": {
+          "value": "#ff0000"
+        }
+      }
+    },
+    {
+      "type": "stroke-color",
+      "variable": "test",
+      "element": "rect-inline-css-styles",
+      "frames": {
+        "test": {
+          "value": "#ff0000"
+        }
+      }
+    },
+    {
+      "type": "stroke-width",
+      "variable": "test",
+      "element": "rect-inline-css-styles",
+      "frames": {
+        "test": {
+          "value": 10
+        }
+      }
+    },
+    {
+      "type": "opacity",
+      "variable": "test",
+      "element": "rect-inline-css-styles",
+      "frames": {
+        "test": {
+          "value": 0.5
+        }
+      }
+    },
+    {
+      "type": "fill-color",
+      "variable": "test",
+      "element": "rect-class-css-styles",
+      "frames": {
+        "test": {
+          "value": "#ff0000"
+        }
+      }
+    },
+    {
+      "type": "stroke-color",
+      "variable": "test",
+      "element": "rect-class-css-styles",
+      "frames": {
+        "test": {
+          "value": "#ff0000"
+        }
+      }
+    },
+    {
+      "type": "stroke-width",
+      "variable": "test",
+      "element": "rect-class-css-styles",
+      "frames": {
+        "test": {
+          "value": 10
+        }
+      }
+    },
+    {
+      "type": "opacity",
+      "variable": "test",
+      "element": "rect-class-css-styles",
+      "frames": {
+        "test": {
+          "value": 0.5
+        }
+      }
+    }
+  ]
+}

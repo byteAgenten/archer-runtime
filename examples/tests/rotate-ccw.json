@@ -1,0 +1,32 @@
+{
+  "variables": [
+    {
+      "name": "value",
+      "type": "number",
+      "keyFrames": {},
+      "minimum": 0,
+      "maximum": 100,
+      "defaultValue": 0
+    }
+  ],
+  "transformations": [
+    {
+      "type": "rotate",
+      "element": "rect",
+      "variable": "value",
+      "center": "bottom-right",
+      "frames": {
+        "min": {
+          "value": 0,
+          "transition": "linear"
+        },
+        "max": {
+          "value": -360,
+          "transition": "linear"
+        }
+      },
+      "priority": 0
+    }
+  ],
+  "notifications": []
+}

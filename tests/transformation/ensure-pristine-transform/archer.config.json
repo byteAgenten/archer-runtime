@@ -1,0 +1,86 @@
+{
+  "variables": [
+    {
+      "name": "movement",
+      "type": "number",
+      "keyFrames": {},
+      "minimum": 0,
+      "maximum": 100
+    },
+    {
+      "name": "direction",
+      "type": "number",
+      "keyFrames": {},
+      "minimum": 0,
+      "maximum": 360
+    }
+  ],
+  "transformations": [
+    {
+      "name": "rotate_outer",
+      "type": "rotate",
+      "element": "outer",
+      "variable": "direction",
+      "frames": {
+        "$min": {
+          "name": "$min",
+          "value": 180,
+          "transition": "linear"
+        },
+        "$max": {
+          "name": "$max",
+          "value": 540,
+          "transition": "step"
+        }
+      },
+      "priority": 120,
+      "center": "center"
+    },
+    {
+      "name": "translate_inner",
+      "type": "translate",
+      "element": "inner",
+      "variable": "movement",
+      "frames": {
+        "$min": {
+          "name": "$min",
+          "value": {
+            "x": 0,
+            "y": 92
+          },
+          "transition": "linear"
+        },
+        "$max": {
+          "name": "$max",
+          "value": {
+            "x": 0,
+            "y": -92
+          },
+          "transition": "step"
+        }
+      },
+      "priority": 130,
+      "axis": "both"
+    },
+    {
+      "name": "fill-color_inner",
+      "type": "fill-color",
+      "element": "inner",
+      "variable": "movement",
+      "frames": {
+        "$min": {
+          "name": "$min",
+          "value": null,
+          "transition": "linear"
+        },
+        "$max": {
+          "name": "$max",
+          "value": null,
+          "transition": "step"
+        }
+      },
+      "priority": 0
+    }
+  ],
+  "elements": []
+}

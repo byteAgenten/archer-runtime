@@ -1,0 +1,31 @@
+{
+  "variables": [
+    {
+      "name": "value",
+      "type": "number",
+      "keyFrames": {
+        "middle": 50
+      },
+      "minimum": 0,
+      "maximum": 100,
+      "defaultValue": 0
+    }
+  ],
+  "transformations": [
+    {
+      "type": "image-url",
+      "element": "image",
+      "variable": "value",
+      "frames": {
+        "min": {
+          "value": "katze2.gif"
+        },
+        "middle": {
+          "value": "sam1.gif"
+        }
+      },
+      "priority": 0
+    }
+  ],
+  "notifications": []
+}

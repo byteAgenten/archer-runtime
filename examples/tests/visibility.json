@@ -1,0 +1,31 @@
+{
+  "variables": [
+    {
+      "name": "value",
+      "type": "number",
+      "keyFrames": {},
+      "minimum": 0,
+      "maximum": 100,
+      "defaultValue": 0
+    }
+  ],
+  "transformations": [
+    {
+      "type": "visibility",
+      "element": "rect",
+      "variable": "value",
+      "frames": {
+        "min": {
+          "value": true,
+          "transition": "linear"
+        },
+        "max": {
+          "value": false,
+          "transition": "linear"
+        }
+      },
+      "priority": 0
+    }
+  ],
+  "notifications": []
+}

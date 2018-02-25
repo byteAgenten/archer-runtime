@@ -1,0 +1,38 @@
+{
+  "variables": [
+    {
+      "name": "value",
+      "type": "number",
+      "keyFrames": {},
+      "minimum": 0,
+      "maximum": 100,
+      "defaultValue": 0
+    }
+  ],
+  "transformations": [
+    {
+      "type": "scale",
+      "element": "rect",
+      "variable": "value",
+      "center": "top-left",
+      "frames": {
+        "min": {
+          "value": {
+            "x": 0,
+            "y": 0
+          },
+          "transition": "linear"
+        },
+        "max": {
+          "value": {
+            "x": 2,
+            "y": 2
+          },
+          "transition": "linear"
+        }
+      },
+      "priority": 0
+    }
+  ],
+  "notifications": []
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <script src='../../bower_components/jquery/dist/jquery.js'></script>
+    <script src='../../bower_components/snap.svg/dist/snap.svg.js'></script>
+    <script src='../../bower_components/requirejs/require.js'></script>
+
+    <style>
+
+        body {
+            font-size: 12px;
+            font-family: Monaco;
+        }
+
+        .header {
+            margin: 25px 25px 0 25px;
+        }
+
+        .test {
+            position: relative;
+            margin: 25px;
+            float: left;
+        }
+
+        .test .button {
+            position: absolute;
+            top: -2px;
+            right: 0;
+        }
+
+        .test .canvas {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+
+    </style>
+
+    <script language='javascript' type='text/javascript'>
+
+        require.config({
+            paths: {
+                'iag/client': '../../../src/iag/client',
+                'lodash': '../../../dist/lodash/lodash.build'
+            }
+        });
+
+        var envs = [];
+
+        require(['iag/client/client'], function (client) {
+
+            addTest('Rotate', 'rotate.json', 'box.svg');
+            addTest('Rotate CCW', 'rotate-ccw.json', 'box.svg');
+            addTest('Rotate Center Undef.', 'rotate-center-undefined.json', 'box.svg');
+            addTest('Translate', 'translate.json', 'box.svg');
+            addTest('Translate X Only', 'translate-x-only.json', 'box.svg');
+            addTest('Translate Y Only', 'translate-y-only.json', 'box.svg');
+            addTest('Translate Frame Default Value', 'translate-frame-default-value.json', 'box.svg');
+            addTest('Scale', 'scale.json', 'box.svg');
+            addTest('Scale X Only', 'scale-x-only.json', 'box.svg');
+            addTest('Scale Y Only', 'scale-y-only.json', 'box.svg');
+            addTest('Text', 'text.json', 'text.svg');
+            addTest('Text Bind Variable', 'text-bind.json', 'text.svg');
+            addTest('Image Url', 'image-url.json', 'image.svg');
+            addTest('Opacity', 'opacity.json', 'box.svg');
+            addTest('Opacity From Default', 'opacity-default.json', 'box.svg');
+            addTest('Fill Color', 'fill-color.json', 'box.svg');
+            addTest('Fill Color From Default', 'fill-color-default.json', 'box.svg');
+            addTest('Fill Color Inherited Default', 'fill-color-inherit-default.json', 'box-inherit-styles.svg');
+            addTest('Stroke Color', 'stroke-color.json', 'box.svg');
+            addTest('Stroke Color From Default', 'stroke-color-default.json', 'box.svg');
+            addTest('Stroke Width', 'stroke-width.json', 'box.svg');
+            addTest('Stroke Width From Default', 'stroke-width-default.json', 'box.svg');
+            addTest('Visibility', 'visibility.json', 'box.svg');
+
+            // TODO: Button for displaying config source
+            function addTest(testName, configFile, graphicFile) {
+
+                var testElement = $([
+                    '<div class="test">',
+                    '<span class="title"></span>',
+                    '<div class="button"><button>Play</button></div>',
+                    '<div class="canvas"></div>',
+                    '</div>'
+                ].join(''));
+
+                testElement.appendTo($('body'));
+                testElement.find('span.title').text(testName);
+                testElement.find('button').click(function () {
+                    env.simulator.simulate('value');
+                });
+
+                var env = client.create(testElement.find('div.canvas'));
+                env.document.setAssetRoot('images');
+                env.load(graphicFile, configFile);
+
+                envs.push(env);
+            }
+
+            $('#play_all').click(function () {
+                $.each(envs, function (i, env) {
+                    env.simulator.simulate('value');
+                })
+            });
+        });
+
+    </script>
+</head>
+<body style='margin: 0;'>
+
+<div class="header">
+    <button id="play_all">Play All</button>
+</div>
+
+</body>
+</html>

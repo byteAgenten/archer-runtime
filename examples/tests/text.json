@@ -1,0 +1,35 @@
+{
+  "variables": [
+    {
+      "name": "value",
+      "type": "number",
+      "keyFrames": {
+        "low": 20,
+        "high": 80
+      },
+      "minimum": 0,
+      "maximum": 100,
+      "defaultValue": 0
+    }
+  ],
+  "transformations": [
+    {
+      "type": "text",
+      "element": "text",
+      "variable": "value",
+      "frames": {
+        "min": {
+          "value": "Near Minimum"
+        },
+        "low": {
+          "value": "Between"
+        },
+        "high": {
+          "value": "Near Maximum"
+        }
+      },
+      "priority": 0
+    }
+  ],
+  "notifications": []
+}
