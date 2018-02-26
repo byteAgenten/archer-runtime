@@ -1,4 +1,4 @@
-# Archer Runtime
+# archer-runtime
 
 The Archer Runtime is a lightweight Open Source JavaScript Library for SVG transformations and interactions with an intuitive API.
 
