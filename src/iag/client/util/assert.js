@@ -1,4 +1,12 @@
-module.exports = function assert(condition, errorMessage) {
+/**
+ * 
+ * Copyright (c) 2018 - present, byteAgenten GmbH, Germany. All rights reserved.
+ * 
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+ module.exports = function assert(condition, errorMessage) {
     if (!condition) {
         throw new Error(errorMessage);
     }

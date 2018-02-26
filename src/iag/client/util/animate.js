@@ -1,3 +1,11 @@
+/**
+ * 
+ * Copyright (c) 2018 - present, byteAgenten GmbH, Germany. All rights reserved.
+ * 
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 // This is basically a wrapper for mina.animate which overrides the stop function behaviour
 // Stop in mina always calls set function, which we do not want
 function animate(from, to, setter, duration, easing, callback) {

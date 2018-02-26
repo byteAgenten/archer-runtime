@@ -1,4 +1,12 @@
-var transition = require('iag/client/translation/transition');
+/**
+ * 
+ * Copyright (c) 2018 - present, byteAgenten GmbH, Germany. All rights reserved.
+ * 
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+ var transition = require('iag/client/translation/transition');
 var mapping = require('iag/client/translation/mapping');
 var assert = require('iag/client/util/assert');
 

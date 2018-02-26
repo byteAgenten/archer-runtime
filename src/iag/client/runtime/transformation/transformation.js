@@ -1,4 +1,12 @@
-var _ = require('iag/client/util/language-utils');
+/**
+ * 
+ * Copyright (c) 2018 - present, byteAgenten GmbH, Germany. All rights reserved.
+ * 
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+ var _ = require('iag/client/util/language-utils');
 var TransformationFactory = require('iag/client/runtime/transformation/factory');
 var TransformationModel = require('iag/client/model/transformation');
 var Observable = require('iag/client/util/observable');

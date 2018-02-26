@@ -1,3 +1,11 @@
+/**
+ * 
+ * Copyright (c) 2018 - present, byteAgenten GmbH, Germany. All rights reserved.
+ * 
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 var colors = require('iag/client/util/colors');
 var animate = require('iag/client/util/animate');
 
