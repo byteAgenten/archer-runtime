@@ -18,6 +18,12 @@ You can find detailed information about the archer graphics platform at **[http:
 
 * [Basic workflow tutorial](https://wiki.archer.graphics/display/ARCHER/Basic+Workflow+Tutorial)
 * [Runtime guide](https://wiki.archer.graphics/display/ARCHER/Runtime+Guide)
+
+## Editor
+You can download a free version of the editor here:
+* [MacOS](https://itunes.apple.com/de/app/archer-editor/id1154423656?mt=12)
+* [Windows](https://www.microsoft.com/en-us/store/p/archer-editor-value-driven-graphics/9nblggh438sn)
+
  
 ## Examples
 You can find several examples using the archer runtime at
@@ -25,6 +31,7 @@ You can find several examples using the archer runtime at
 
 Another place for exploring and playing with some archer graphics is the
 **[Archer Cloud](https://cloud.archer.graphics/host)**
+
 
 
 ## Build
