@@ -33,7 +33,9 @@ For building the library file you need to have [NodeJS](http://nodejs.org/downlo
 
 
 ### Setup:
-Install the required npm modules by executing the following commands in your terminal window.
+Open a terminal window and navigate to the root folder of the project. Install the required npm modules by executing the following commands. 
+
+*In case you are woking on linux or MacOS you might have to write **`sudo`** in front of **`npm`**.*
 ```shell 
 npm install grunt-cli -g
 npm install bower -g
