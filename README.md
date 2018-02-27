@@ -20,7 +20,7 @@ You can find detailed information about the archer graphics platform at **[http:
 * [Runtime guide](https://wiki.archer.graphics/display/ARCHER/Runtime+Guide)
 
 ## Editor
-You can download a free version of the editor here:
+You can download a free version of the Archer Editor here:
 * [MacOS](https://itunes.apple.com/de/app/archer-editor/id1154423656?mt=12)
 * [Windows](https://www.microsoft.com/en-us/store/p/archer-editor-value-driven-graphics/9nblggh438sn)
 
